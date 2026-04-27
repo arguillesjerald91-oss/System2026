@@ -1,0 +1,265 @@
+/* =====================================================
+   GLOBAL LAYOUT
+===================================================== */
+.main-content {
+  padding: 30px 60px;
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+  background: #f8f9fc;
+  min-height: 100vh;
+  transition: 0.3s ease;
+}
+
+.header {
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  font-size: 1.9em;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+.header p {
+  color: #6f6f6f;
+  font-size: 0.95em;
+}
+
+/* =====================================================
+   SUMMARY CARDS (Current GPA / Highest GPA)
+===================================================== */
+.stats-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.stat-card {
+  flex: 1;
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid #e8e8ef;
+  text-align: center;
+  transition: all 0.3s ease;
+  min-width: 220px;
+}
+
+.stat-card:hover {
+  box-shadow: 0 8px 20px rgba(99,113,245,0.12);
+  border-color: #2563eb;
+}
+
+.stat-card h2 {
+  font-size: 2.2em;
+  font-weight: 700;
+  color: #2563eb;
+  margin: 0;
+}
+
+.stat-card p {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #777;
+}
+
+
+/* =====================================================
+   YEAR TITLE
+===================================================== */
+.year-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 10px 5px 15px;
+  color: #2a2a2a;
+}
+
+/* =====================================================
+   SEMESTER BOX
+===================================================== */
+.semester-box {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border: 1px solid #e8e8ef;
+}
+
+.sem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sem-title {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #2d2d2d;
+}
+
+/* Download Button */
+.btn-download {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-download:hover {
+  background: #2563eb;
+}
+
+
+/* =====================================================
+   TABLE STYLING
+===================================================== */
+.grade-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 18px;
+  font-size: 0.93em;
+}
+
+.grade-table thead tr {
+  background: #eef0ff;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.grade-table thead th {
+  padding: 12px;
+}
+
+.grade-table tbody tr {
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.grade-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.grade-table td {
+  padding: 12px;
+  color: #444;
+}
+
+
+/* =====================================================
+   STATUS BADGES (Passed / Failed / Pending)
+===================================================== */
+.badge {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.82em;
+  font-weight: 600;
+  text-align: center;
+  display: inline-block;
+}
+
+.passed {
+  background: #e9f7ef;
+  color: #27ae60;
+}
+
+.failed {
+  background: #fdecea;
+  color: #c0392b;
+}
+
+.neutral {
+  background: #fef5e6;
+  color: #e67e22;
+}
+
+
+/* =====================================================
+   EMPTY STATE (No Results Yet)
+===================================================== */
+.no-results {
+  margin: 40px auto;
+  padding: 40px;
+  max-width: 600px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  border: 1px solid #e8e8ef;
+}
+
+.no-results i {
+  font-size: 3rem;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.no-results h3 {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #333;
+}
+
+.no-results p {
+  color: #666;
+  font-size: 0.95em;
+}
+
+.grade-value {
+    font-weight: bold;
+    text-align: center;
+}
+.final-grade {
+    font-weight: bold;
+    font-size: 1.1em;
+    text-align: center;
+    color: #2c3e50;
+}
+.subject-count {
+    background: #2563eb;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.9em;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 25px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .sem-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .btn-download {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 20px;
+  }
+
+  .grade-table {
+    font-size: 0.85em;
+  }
+}

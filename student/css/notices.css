@@ -1,0 +1,284 @@
+/* notices.css - Student Side Styling */
+
+.main-content {
+  padding: 30px 60px;
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+  background: #f8f9fc;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.header {
+  margin-bottom: 25px;
+}
+
+
+.header h2 {
+  font-size: 1.9em;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+.header p {
+  color: #6f6f6f;
+  font-size: 0.95em;
+}
+
+.page-title {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+
+
+/* Notice Controls */
+.notice-controls {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.search-box {
+  position: relative;
+  flex: 1;
+  max-width: 400px;
+}
+
+.search-box i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7f8c8d;
+}
+
+.search-box input {
+  width: 70%;
+  padding: 12px 15px 12px 45px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Filter Buttons */
+.notice-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  border: 2px solid #e9ecef;
+  background: white;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.filter-btn.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* Notice Cards - Student Style */
+.notice-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.notice-card-student {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  border-left: 5px solid #2563eb;
+}
+
+.notice-card-student:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.notice-card-student[data-type="urgent"] {
+  border-left-color: #e74c3c;
+}
+
+.notice-card-student[data-type="important"] {
+  border-left-color: #3498db;
+}
+
+.notice-card-student[data-type="information"] {
+  border-left-color: #9b59b6;
+}
+
+.notice-icon {
+  font-size: 1.1rem;
+  padding: 10px;
+  border-radius: 50%;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  height: 42px;
+}
+
+
+.notice-card-student[data-type="urgent"] .notice-icon-student {
+  color: #e74c3c;
+  background: #fdedec;
+}
+
+.notice-card-student[data-type="important"] .notice-icon-student {
+  color: #2563eb;
+  background: #f4ecf7;
+}
+
+.notice-card-student[data-type="General"] .notice-icon-student {
+  color: #9b59b6;
+  background: #ebf5fb;
+}
+
+.notice-content-student {
+  flex: 1;
+}
+
+.notice-header-student {
+  display: flex;
+  justify-content: between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 15px;
+    
+}
+
+.notice-title-student {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin: 0;
+  flex: 1;
+    font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+}
+
+.notice-badge-student {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  
+}
+
+.notice-badge-student.urgent {
+  background: #fdedec;
+  color: #e74c3c;
+}
+
+.notice-badge-student.important {
+  background: #f4ecf7;
+  color: #2563eb;
+}
+
+.notice-badge-student.information {
+  background: #ebf5fb;
+  color: #9b59b6;
+}
+
+.notice-message-student {
+  color: #5d6d7e;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  
+}
+
+.notice-footer-student {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice-date-student {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* No Notices State */
+.no-notices-student {
+  text-align: center;
+  padding: 60px 20px;
+  color: #7f8c8d;
+}
+
+.no-notices-student i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  opacity: 0.5;
+}
+
+.no-notices-student p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notice-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-box {
+    max-width: none;
+  }
+  
+  .notice-filters {
+    justify-content: center;
+  }
+  
+  .notice-card-student {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .notice-header-student {
+    flex-direction: column;
+    align-items: center;
+  }
+}

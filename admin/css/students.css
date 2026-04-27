@@ -1,0 +1,248 @@
+/* ===== Main Content ===== */
+.main-content {
+  padding: 30px 60px;       /* modern spacing */
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+  background: #f8f9fc;      /* same as notice.css */
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* ===== Header ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;      /* added to match notice.css */
+}
+
+.header h1 {
+  font-size: 1.9em;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+
+/* ===== Buttons ===== */
+.btn-add, .btn-edit {
+  background: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-add:hover,
+.btn-edit:hover {
+  background: #2c82c9;
+}
+
+/* Action Buttons (icons) */
+.action-btn {
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.action-btn.edit { color: #000; }
+.action-btn.delete { color: #F44336; }
+
+/* ===== Filters ===== */
+.filter-container {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+/* smooth focus effect */
+.filter-container input:focus,
+.filter-container select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+  outline: none;
+}
+
+/* ===== TABLE SECTION (UNCHANGED) ===== */
+/* Do not edit table styles to avoid breaking layout */
+.table-container {
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th {
+  background: #f4f6f8;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+/* ===== BADGES (same look but unchanged behavior) ===== */
+.badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge.active {
+  background: #2ecc71;
+  color: white;
+}
+
+.badge.inactive {
+  background: #bdc3c7;
+  color: #2d2d2d;
+}
+
+.badge.semester1 {
+  background: #2563eb;
+  color: #fff;
+}
+
+.badge.semester2 {
+  background: #2ecc71;
+  color: #fff;
+}
+
+.badge.notenrolled {
+  background: #7f8c8d;
+  color: #fff;
+}
+
+/* ===== Export PDF Button ===== */
+.export-buttons {
+  margin: 10px 0;
+}
+
+.export-buttons .export-btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.export-buttons .export-btn:hover {
+  background-color: #2c82c9;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .table-container {
+    padding: 15px;
+  }
+
+  .pagination-controls {
+    flex-wrap: wrap;
+  }
+
+  .pagination-controls .btn {
+    padding: 6px 10px;
+    font-size: 0.85em;
+  }
+}
+
+/* ===== PAGINATION STYLES ===== */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.pagination-controls .btn {
+  padding: 8px 12px;
+  font-size: 0.9em;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.pagination-controls .btn:hover {
+  background: #3498db;
+  color: #fff;
+  border-color: #3498db;
+  box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.pagination-controls .btn:active {
+  transform: scale(0.95);
+}
+
+.pagination-controls .current-page {
+  padding: 8px 12px;
+  background: #3498db;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+}
+
+.pagination-controls .ellipsis {
+  color: #999;
+  padding: 0 4px;
+  font-weight: bold;
+}

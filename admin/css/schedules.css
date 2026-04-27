@@ -1,0 +1,461 @@
+/* ===== Main Content ===== */
+.main-content {
+  padding: 30px 60px;
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+  background: #f8f9fc;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+.header {
+  margin-bottom: 25px;
+}
+.header h2 {
+  font-size: 1.9em;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+.header p {
+  color: #6f6f6f;
+  font-size: 0.95em;
+}
+/* ===== Class Schedule Page Styles ===== */
+
+/* ===== Filter Bar ===== */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.filter-container input:focus,
+.filter-container select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+
+.table-container {
+  overflow-x: auto;  /* scrollable on small screens */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th {
+  background: #f4f6f8;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  table {
+    font-size: 14px;
+  }
+  th, td {
+    padding: 8px;
+  }
+}
+
+/* ====== FORM SECTIONS (Create + Assign Schedule) ====== */
+.form-container {
+  background: white;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50;
+  border-left: 5px solid #3498db;
+  padding-left: 12px;
+}
+
+.form-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-container input,
+.form-container select {
+  flex: 1 1 250px;
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+
+/* ====== BUTTONS ====== */
+/* ===== BUTTONS ===== */
+button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+/* Modern Primary */
+.btn-primary,
+button[name="create_schedule"],
+button[name="assign_schedule"] {
+  background: #007bff;
+  color: #fff;
+}
+.btn-primary:hover,
+button[name="create_schedule"]:hover,
+button[name="assign_schedule"]:hover {
+  background: #007bff;
+}
+
+/* Secondary */
+.btn-secondary,
+button[type="button"] {
+  background: #95a5a6;
+  color: #fff;
+    border-radius: 50px;
+}
+
+.btn-secondary:hover,
+button[type="button"]:hover {
+  background: #7f8c8d;
+}
+
+/* Success */
+.btn-success {
+  background: #28a745;
+  color: #fff;
+}
+.btn-success:hover {
+  background: #218838;
+}
+
+/* Danger */
+.btn-danger {
+  background: #e74c3c;
+  color: #fff;
+}
+.btn-danger:hover {
+  background: #c0392b;
+}
+
+/* Info */
+.btn-info {
+  background: #007bff;
+  color: #fff;
+}
+.btn-info:hover {
+  background: #007bff;
+}
+
+/* Edit/Add Buttons (icon buttons) */
+.btn-add,
+.btn-edit {
+  background: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-add:hover,
+.btn-edit:hover {
+  background: #2980b9;
+}
+
+/* ===== ACTION ICONS ===== */
+.action-btn {
+  margin: 0 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.action-btn.edit { color: #000000; }
+.action-btn.delete { color: #e74c3c; }
+
+/* ===== SUCCESS MODAL STYLES ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.success-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: popUp 0.4s ease;
+  position: relative;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success-modal i {
+  color: #28a745;
+  font-size: 50px;
+  margin-bottom: 15px;
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.success-modal h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.success-modal p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.success-modal button {
+  background: linear-gradient(to right, #1976D2, #0D47A1);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.success-modal button:hover {
+  background: linear-gradient(to right, #0D47A1, #002171);
+}
+
+
+/* ===== MODALS (Delete + Edit) ===== */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.modal-content input,
+.modal-content select {
+  width: 90%;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-content .btn-primary {
+  background: #007bff;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.modal-content .btn-primary:hover {
+  background: #007bff;
+    border-radius: 50px;
+}
+
+.modal-content .cancel-btn {
+  background: #95a5a6;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+/* ✅ Center the buttons */ #deleteModal form { display: flex; justify-content: center; gap: 12px; } #deleteModal .btn { padding: 8px 18px; border: none; border-radius: 6px; cursor: pointer; font-size: 14px; transition: background 0.3s ease; } #deleteModal .delete-btn { background: #e74c3c; color: #fff; } #deleteModal .delete-btn:hover { background: #c0392b; } #deleteModal .cancel-btn { background: #95a5a6; color: #fff; } #deleteModal .cancel-btn:hover { background: #7f8c8d; } /* Close icon */ #deleteModal .close { position: absolute; top: 10px; right: 15px; font-size: 22px; font-weight: bold; cursor: pointer; color: #666; } #deleteModal .close:hover { color: #000; }
+/* Close icon */
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal .close:hover {
+  color: #000;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .form-container form {
+    flex-direction: column;
+  }
+  .form-container input,
+  .form-container select {
+    flex: 1 1 100%;
+  }
+  .form-container button {
+    width: 100%;
+  }
+
+  .pagination-controls {
+    flex-wrap: wrap;
+  }
+
+  .pagination-controls .btn {
+    padding: 6px 10px;
+    font-size: 0.85em;
+  }
+}
+
+/* ===== PAGINATION STYLES ===== */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.pagination-controls .btn {
+  padding: 8px 12px;
+  font-size: 0.9em;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.pagination-controls .btn:hover {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.pagination-controls .btn:active {
+  transform: scale(0.95);
+}
+
+.pagination-controls .current-page {
+  padding: 8px 12px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+}
+
+.pagination-controls .ellipsis {
+  color: #999;
+  padding: 0 4px;
+  font-weight: bold;
+}

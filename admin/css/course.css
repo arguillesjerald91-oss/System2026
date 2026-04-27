@@ -1,0 +1,640 @@
+/* ===== Main Content ===== */
+.main-content {
+  padding: 30px 60px;
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+  background: #f8f9fc;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+
+.header {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1,
+.header h2 {
+  font-size: 1.9em;
+  font-weight: 600;
+  color: #2a2a2a;
+}
+.main-content + .main-content {
+  border-top: 2px solid #eaeaea;
+  padding-top: 40px;
+}
+
+.filter-container,
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filter-container input,
+.filter-container select,
+.filter-bar input,
+.filter-bar select {
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+.filter-container input:focus,
+.filter-container select:focus,
+.filter-bar input:focus,
+.filter-bar select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.1);
+}
+
+/* ===== FORM CONTAINER (Create + Assign Schedule) ===== */
+.form-container {
+  background: white;
+  border-radius: 15px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.form-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.form-container h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 18px;
+  border-left: 5px solid #3498db;
+  padding-left: 12px;
+}
+
+.form-container form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-container input,
+.form-container select {
+  flex: 1 1 250px;
+  padding: 12px 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.15);
+}
+
+/* ===== Buttons ===== */
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end; /* pushes button to the right */
+  margin-top: 10px;          /* spacing from inputs */
+}
+
+
+/* ===== BUTTONS (Modernized) ===== */
+button,
+.btn-add,
+.btn-edit,
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-info {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+/* Add/edit buttons */
+.btn-add,
+.btn-edit {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-add:hover,
+.btn-edit:hover {
+  background: #007bff;
+}
+
+/* Primary */
+.btn-primary,
+button[name="create_schedule"],
+button[name="assign_schedule"] {
+  background: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover,
+button[name="create_schedule"]:hover,
+button[name="assign_schedule"]:hover {
+  background: #0062cc;
+}
+
+/* Secondary */
+.btn-secondary,
+button[type="button"] {
+  background: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover,
+button[type="button"]:hover {
+  background: #5a6268;
+}
+
+/* Success */
+.btn-success {
+  background: #28a745;
+  color: #fff;
+}
+.btn-success:hover {
+  background: #218838;
+}
+
+/* Danger */
+.btn-danger {
+  background: #e74c3c;
+  color: #fff;
+}
+.btn-danger:hover {
+  background: #c0392b;
+}
+
+/* Info */
+.btn-info {
+  background: #007bff;
+  color: #fff;
+}
+.btn-info:hover {
+  background: #007bff;
+}
+
+
+.action-btn.edit { color: #000; }
+.action-btn.delete { color: #F44336; }
+
+/* ===== Filters ===== */
+.filter-container {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.filter-container input,
+.filter-container select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* ===== Table ===== */
+.table-container {
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+th {
+  background: #f4f6f8;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+
+
+/* ===== Modal ===== */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background: #fff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+}
+.close:hover { color: #000; }
+
+/* ===== Success Modal ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.success-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: popUp 0.4s ease;
+  position: relative;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success-modal i {
+  color: #28a745;
+  font-size: 50px;
+  margin-bottom: 15px;
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.success-modal h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.success-modal p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.success-modal button {
+  background: linear-gradient(to right, #1976D2, #0D47A1);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.success-modal button:hover {
+  background: linear-gradient(to right, #0D47A1, #002171);
+}
+
+
+/* ===== Delete Modal Styles ===== */
+/* ===== Delete Modal (Centered Buttons) ===== */
+#deleteModal .modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center; /* ✅ Center text */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+
+
+/* ✅ Center the buttons */
+#deleteModal form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+#deleteModal .btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+#deleteModal .delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+
+#deleteModal .delete-btn:hover {
+  background: #c0392b;
+}
+
+#deleteModal .cancel-btn {
+  background: #95a5a6;
+  color: #fff;
+}
+
+#deleteModal .cancel-btn:hover {
+  background: #7f8c8d;
+}
+
+/* Close icon */
+#deleteModal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+}
+
+#deleteModal .close:hover {
+  color: #000;
+}
+/* Subject list container */
+.checkbox-container {
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 15px;
+  background: #fafafa;
+}
+
+/* Remove bullet points */
+.subject-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each subject item */
+.subject-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* Last item no border */
+.subject-item:last-child {
+  border-bottom: none;
+}
+
+/* Checkbox + text alignment */
+.subject-item label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Checkbox styling */
+.subject-item input[type="checkbox"] {
+  transform: scale(1.2);
+  accent-color: #007bff;
+}
+
+/* Subject text */
+.subject-title {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.3;
+}
+
+.subject-title small {
+  color: #666;
+  font-size: 13px;
+}
+
+
+
+
+/* ===== Forms ===== */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left; /* ✅ ensure left alignment */
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  display: block;
+  margin-bottom: 6px;
+  text-align: left; /* ✅ align label text to left */
+}
+
+.form-group input,
+.form-group select {
+  width: 70%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: left; /* ✅ align input text to left */
+  display: block;
+  margin: 0; /* remove unwanted centering margins */
+}
+
+/* ===== Form Field Widths ===== */
+.form-group input[name="course_code"],
+.form-group #edit_code {
+  width: 200px;
+}
+
+.form-group input[name="title"],
+.form-group #edit_title {
+  width: 80%;
+  max-width: 300px;
+}
+
+.form-group input[name="lec"],
+.form-group input[name="lab"],
+.form-group input[name="units"],
+.form-group #edit_lec,
+.form-group #edit_lab,
+.form-group #edit_units {
+  width: 100px;
+}
+
+
+
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .filter-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .pagination-controls {
+    flex-wrap: wrap;
+  }
+
+  .pagination-controls .btn {
+    padding: 6px 10px;
+    font-size: 0.85em;
+  }
+}
+
+/* ===== PAGINATION STYLES ===== */
+.pagination-controls {
+  margin-top: 20px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.pagination-controls .btn {
+  padding: 8px 12px;
+  font-size: 0.9em;
+  background: #fff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.pagination-controls .btn:hover {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.pagination-controls .btn:active {
+  transform: scale(0.95);
+}
+
+.pagination-controls .current-page {
+  padding: 8px 12px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+}
+
+.pagination-controls .ellipsis {
+  color: #999;
+  padding: 0 4px;
+  font-weight: bold;
+}
+
+

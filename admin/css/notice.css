@@ -1,0 +1,580 @@
+/* === General Page Styling === */
+body {
+
+  background: #fff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+
+.main-content {
+  padding: 30px 70px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #2d2d2d;
+  transition: 0.3s;
+}
+
+
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end; /* moves button(s) to the right */
+  margin-top: 10px;
+}
+
+
+
+.notice-form {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  margin-bottom: 30px;
+  transition: 0.3s;
+}
+.notice-form:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.notice-form label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.notice-form input,
+.notice-form select,
+.notice-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d0d4da;
+  background: #fff;
+  transition: border 0.3s;
+  
+}
+.notice-form input:focus,
+.notice-form textarea:focus {
+  border-color: #31bbf6;
+  outline: none;
+}
+
+
+.btn {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #007bff;
+}
+
+
+/* === Recent Notices Section === */
+/* === Recent Notices Section === */
+.recent-section {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+.recent-section:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* === Notice List / Cards === */
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notice-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(6px);
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: 0.25s ease;
+}
+.notice-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255,255,255,0.75);
+}
+.notice-icon {
+  font-size: 22px;
+  color: #31bbf6;
+}
+
+/* === Notice Card Layout === */
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notice-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+}
+.notice-card:hover {
+  transform: translateY(-2px);
+  background: #fff;
+}
+
+.notice-icon {
+
+  color: #000000;
+ 
+}
+
+.notice-content {
+  flex: 1;
+}
+
+.notice-title {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge {
+  padding: 3px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+.badge.urgent {
+  background: #ffebeb;
+  color: #d93025;
+}
+.badge.important {
+  background: #f4e5ff;
+  color: #1a73e8;
+}
+.badge.general {
+  background: #eaf3ff;
+  color: #6a1b9a;
+}
+
+.notice-message {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.notice-date {
+  color: #888;
+  font-size: 13px;
+}
+
+/* === Action Buttons === */
+.notice-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.notice-actions button,
+.notice-actions a {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-size: 16px;
+  transition: color 0.2s ease;
+}
+
+.notice-actions a.delete-icon {
+  color: #e74c3c; /* red */
+  transition: color 0.2s;
+}
+
+
+
+
+
+/* === Modal === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  width: 400px;
+  max-width: 90%;
+}
+.modal-content h3 {
+  margin-bottom: 15px;
+}
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.btn-secondary {
+  background: #ccc;
+  color: #333;
+}
+.btn-secondary:hover {
+  background: #b3b3b3;
+}
+
+/* === Edit Notice Modal (match Edit Payment modal style) === */
+#editModal .modal-content {
+  padding: 20px 25px;
+  border-radius: 12px;
+  width: 300px;
+  max-width: 70%;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: left;
+}
+
+#editModal .close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #555;
+}
+
+#editModal h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  text-align: left;
+}
+
+#editModal .form-group {
+  margin-bottom: 15px;
+}
+
+#editModal .form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+#editModal .form-group input,
+#editModal .form-group select,
+#editModal .form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+#editModal .btn-add {
+  width: 28%;
+  background: #007bff; /* same tone as .btn-primary */
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* ===== Success Modal ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+.modal-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.success-modal {
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: popUp 0.4s ease;
+  position: relative;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success-modal i {
+  color: #28a745;
+  font-size: 50px;
+  margin-bottom: 15px;
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.success-modal h3 {
+  color: #333;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.success-modal p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.success-modal button {
+  background: linear-gradient(to right, #1976D2, #0D47A1);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.success-modal button:hover {
+  background: linear-gradient(to right, #0D47A1, #002171);
+}
+
+
+
+
+/* ===== Delete Modal (Centered Buttons) ===== */
+#deleteModal .modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  text-align: center; /* ✅ Center text */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+
+
+.modal-content h2 {
+  margin-bottom: 15px;
+}
+
+.modal-content p {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+
+
+/* ✅ Center the buttons */
+#deleteModal form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+#deleteModal .btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+#deleteModal .delete-btn {
+  background: #e74c3c;
+  color: #fff;
+}
+
+#deleteModal .delete-btn:hover {
+  background: #c0392b;
+}
+
+#deleteModal .cancel-btn {
+  background: #95a5a6;
+  color: #fff;
+}
+
+#deleteModal .cancel-btn:hover {
+  background: #7f8c8d;
+}
+
+/* Close icon */
+#deleteModal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #666;
+}
+
+#deleteModal .close:hover {
+  color: #000;
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+  .main-content {
+    padding: 20px 40px;
+  }
+
+  .page-title {
+    font-size: 22px;
+  }
+
+  .recent-section,
+  .notice-form {
+    padding: 18px;
+  }
+
+  .notice-card {
+    padding: 15px;
+  }
+}
+
+/* Mobile Landscape (<= 768px) */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 20px 25px;
+  }
+
+  .page-title {
+    font-size: 20px;
+  }
+
+  .notice-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notice-icon {
+    font-size: 20px;
+  }
+
+  .notice-actions {
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
+
+/* Mobile Portrait (<= 480px) */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 15px 20px;
+  }
+
+  .page-title {
+    font-size: 18px;
+  }
+
+  .notice-form input,
+  .notice-form select,
+  .notice-form textarea {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .notice-card {
+    padding: 12px 15px;
+  }
+
+  .notice-title {
+    font-size: 15px;
+  }
+
+  .notice-message {
+    font-size: 13px;
+  }
+
+  .notice-date {
+    font-size: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .modal-content {
+    padding: 20px;
+  }
+}
+
